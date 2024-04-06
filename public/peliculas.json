@@ -1,0 +1,52 @@
+[
+  {
+    "poster_image": "../public/vengadores.jpg",
+    "movie_name": "Iron Man",
+    "release_year": 2008
+  },
+  {
+    "poster_image": "../public/vengadores.jpg",
+    "movie_name": "The Incredible Hulk",
+    "release_year": 2008
+  },
+  {
+    "poster_image": "../public/vengadores.jpg",
+    "movie_name": "Iron Man 2",
+    "release_year": 2010
+  },
+  {
+    "poster_image": "../public/vengadores.jpg",
+    "movie_name": "Thor",
+    "release_year": 2011
+  },
+  {
+    "poster_image": "../public/vengadores.jpg",
+    "movie_name": "Captain America: El primer vengador",
+    "release_year": 2011
+  },
+  {
+    "poster_image": "../public/vengadores.jpg",
+    "movie_name": "Los Vengadores",
+    "release_year": 2012
+  },
+  {
+    "poster_image": "../public/vengadores.jpg",
+    "movie_name": "Iron Man 3",
+    "release_year": 2013
+  },
+  {
+    "poster_image": "../public/vengadores.jpg",
+    "movie_name": "Thor: El mundo oscuro",
+    "release_year": 2013
+  },
+  {
+    "poster_image": "../public/vengadores.jpg",
+    "movie_name": "Guardianes de la Galaxia",
+    "release_year": 2014
+  },
+  {
+    "poster_image": "../public/vengadores.jpg",
+    "movie_name": "Avengers: Age of Ultron",
+    "release_year": 2015
+  }
+]

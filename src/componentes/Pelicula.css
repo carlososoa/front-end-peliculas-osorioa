@@ -1,0 +1,55 @@
+.contendedor-peliculas{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 10px;
+  margin: auto;
+  width: 100%;
+  
+}
+.enlace-pelicula:hover{  
+  cursor: pointer; 
+}
+
+img{
+  width: 240px;
+  height: 340px;
+  border-radius: 10px;
+}
+
+.div-pelicula{
+  width: 240px;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color:#080F28;
+}
+.div-pelicula:hover{
+  border-color: #007aff;
+ 
+}
+
+.titulo-pelicula{
+  margin-top: 2px;
+  color: white;
+
+}
+span{
+  background-color: #007aff;
+  border-radius: 1rem;
+  bottom: .5rem;
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1.2rem;
+  padding: 0 .5rem;  
+  z-index: 3;
+}
+.button-crear{   
+  margin: auto;
+  margin-bottom: 20px;
+  
+}
+

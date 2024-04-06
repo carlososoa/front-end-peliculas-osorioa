@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: #1a1a1a; /* Azul oscuro más claro */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #333333; /* Línea divisoria */
+  color: aliceblue;
+}
+
+th {
+  background-color: #17a2b8; /* Azul turquesa */
+  color: #ffffff;
+}
+
+/* Estilos para los botones */
+button {
+  background-color: #17a2b8; /* Azul turquesa */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1a1a1a; /* Azul oscuro más claro */
+}

@@ -1,0 +1,33 @@
+.peli-det-seccion{
+  
+  display: flex;
+}
+.peli-det-aside{
+  
+  width: 250px;
+
+}
+.peli-det-img{
+  width: 100%;
+  
+}
+iframe{
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.peli-det-h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-align: center;
+  color: aliceblue;
+}
+.peli-det-p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: aliceblue;
+}
+button{
+  cursor: pointer;
+}
