@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 
 function Genero() {
 
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
+
   const [generoConsulta, setGeneroConsulta] = useState([])
 
   const fetchGeneros = async () => {
@@ -14,7 +16,7 @@ function Genero() {
 
     try {
 
-      const response = await fetch('http://localhost:3000/genero')
+      const response = await fetch(`${url_api}/genero`)
       const data = await response.json()
 
 

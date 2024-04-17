@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react';
 
 function Director() {
 
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
+
   const [directorConsulta, setDirectorConsulta] = useState([])
 
   const fetchDirectores = async () => {
@@ -13,7 +15,7 @@ function Director() {
 
     try {
 
-      const response = await fetch('http://localhost:3000/director')
+      const response = await fetch(`${url_api}/director`)
       const data = await response.json()
 
 

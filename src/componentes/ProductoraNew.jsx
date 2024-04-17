@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom"
 
 function ProductoraNew() {
 
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
+
   const { register, handleSubmit} = useForm() 
   const navigate = useNavigate(); 
 
@@ -15,7 +17,7 @@ function ProductoraNew() {
     console.log(data);
 
     const enviarDatos = async () => {
-      const respuesta = await fetch(`http://localhost:3000/productora`, {
+      const respuesta = await fetch(`${url_api}/productora`, {
         method: "POST",
         body: JSON.stringify(data), 
         headers: {

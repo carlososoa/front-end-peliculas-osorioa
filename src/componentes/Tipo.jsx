@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 
 function Tipo() {
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
 
   const [tipoConsulta, setTipoConsulta] = useState([])
 
@@ -14,7 +15,7 @@ function Tipo() {
 
     try {
 
-      const response = await fetch('http://localhost:3000/tipo')
+      const response = await fetch(`${url_api}/tipo`)
       const data = await response.json()
 
 

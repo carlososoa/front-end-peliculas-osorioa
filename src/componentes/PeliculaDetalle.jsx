@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 
 function PeliculaDetalle() {
 
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
+
   const { id } = useParams(); 
 
   const [peliculasC, setPeliculas] = useState([])
@@ -17,7 +19,7 @@ function PeliculaDetalle() {
 
     try {
 
-      const response = await fetch(`http://localhost:3000/media/${id}`)
+      const response = await fetch(`${url_api}/media/${id}`)
       const data = await response.json()          
       setPeliculas(data)
       setGenero(data.genero) 

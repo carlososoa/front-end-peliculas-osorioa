@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom"
 
 function DirectorNew() {
 
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
+
   const { register, handleSubmit} = useForm() 
   const navigate = useNavigate(); 
 
@@ -15,7 +17,7 @@ function DirectorNew() {
     console.log(data);
 
     const enviarDatos = async () => {
-      const respuesta = await fetch(`http://localhost:3000/director`, {
+      const respuesta = await fetch(`${url_api}/director`, {
         method: "POST",
         body: JSON.stringify(data), 
         headers: {

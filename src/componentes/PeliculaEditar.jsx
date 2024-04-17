@@ -9,6 +9,8 @@ import { useForm } from "react-hook-form"
 
 function PeliculaEditar() {
 
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
+
   const { register, handleSubmit, setValue } = useForm()
   const navigate = useNavigate();
   const { id } = useParams();
@@ -27,7 +29,7 @@ function PeliculaEditar() {
 
     try {
 
-      const response = await fetch(`http://localhost:3000/media/${id}`)
+      const response = await fetch(`${url_api}/media/${id}`)
       const data = await response.json()      
       setValue('serial', data.serial)
       setValue('titulo', data.titulo)
@@ -51,7 +53,7 @@ function PeliculaEditar() {
 
     try {
 
-      const response = await fetch(`http://localhost:3000/genero`)
+      const response = await fetch(`${url_api}/genero`)
       const data = await response.json()
 
       setGeneros(data)
@@ -64,7 +66,7 @@ function PeliculaEditar() {
 
     try {
 
-      const response = await fetch(`http://localhost:3000/director`)
+      const response = await fetch(`${url_api}/director`)
       const data = await response.json()
 
       setDirectores(data)
@@ -77,7 +79,7 @@ function PeliculaEditar() {
 
     try {
 
-      const response = await fetch(`http://localhost:3000/productora`)
+      const response = await fetch(`${url_api}/productora`)
       const data = await response.json()
 
       setProductoras(data)
@@ -90,7 +92,7 @@ function PeliculaEditar() {
 
     try {
 
-      const response = await fetch(`http://localhost:3000/tipo`)
+      const response = await fetch(`${url_api}/tipo`)
       const data = await response.json()
 
       setTipos(data)
@@ -110,7 +112,7 @@ function PeliculaEditar() {
     console.log(data);
 
     const enviarDatos = async () => {
-      const respuesta = await fetch(`http://localhost:3000/media/${id}`, {
+      const respuesta = await fetch(`${url_api}/media/${id}`, {
         method: "PUT",
         body: JSON.stringify(data), // data can be `string` or {object}!
         headers: {

@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form"
 
 
 function TipoNew() {
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
   
   const navigate = useNavigate();
   const { register, handleSubmit} = useForm()  
@@ -15,7 +16,7 @@ function TipoNew() {
     console.log(data);
 
     const enviarDatos = async () => {
-      const respuesta = await fetch(`http://localhost:3000/tipo`, {
+      const respuesta = await fetch(`${url_api}/tipo`, {
         method: "POST",
         body: JSON.stringify(data), 
         headers: {

@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form"
 
 
 function ProductoraEdit() {
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
 
   const { register, handleSubmit, setValue } = useForm()
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ function ProductoraEdit() {
 
     try {
 
-      const response = await fetch(`http://localhost:3000/productora/${id}`)
+      const response = await fetch(`${url_api}/productora/${id}`)
       const data = await response.json()      
       setValue('nombre', data.nombre)
       setValue('estado', data.estado)
@@ -42,7 +43,7 @@ function ProductoraEdit() {
     console.log(data);
 
     const enviarDatos = async () => {
-      const respuesta = await fetch(`http://localhost:3000/productora/${id}`, {
+      const respuesta = await fetch(`${url_api}/productora/${id}`, {
         method: "PUT",
         body: JSON.stringify(data), 
         headers: {

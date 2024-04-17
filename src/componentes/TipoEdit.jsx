@@ -9,6 +9,8 @@ import { useForm } from "react-hook-form"
 
 function TipoEdit() {
 
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
+
   const { register, handleSubmit, setValue } = useForm()
   const navigate = useNavigate();
 
@@ -18,7 +20,7 @@ function TipoEdit() {
 
     try {
 
-      const response = await fetch(`http://localhost:3000/tipo/${id}`)
+      const response = await fetch(`${url_api}/tipo/${id}`)
       const data = await response.json()      
       setValue('nombre', data.nombre)      
       setValue('descripcion', data.descripcion)
@@ -40,7 +42,7 @@ function TipoEdit() {
     console.log(data);
 
     const enviarDatos = async () => {
-      const respuesta = await fetch(`http://localhost:3000/tipo/${id}`, {
+      const respuesta = await fetch(`${url_api}/tipo/${id}`, {
         method: "PUT",
         body: JSON.stringify(data), 
         headers: {

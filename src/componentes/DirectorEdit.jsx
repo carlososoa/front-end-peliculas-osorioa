@@ -9,6 +9,8 @@ import { useForm } from "react-hook-form"
 
 function DirectorEdit() {
 
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
+
   const { register, handleSubmit, setValue } = useForm()
   const navigate = useNavigate();
 
@@ -18,7 +20,7 @@ function DirectorEdit() {
 
     try {
 
-      const response = await fetch(`http://localhost:3000/director/${id}`)
+      const response = await fetch(`${url_api}/director/${id}`)
       const data = await response.json()      
       setValue('nombre', data.nombre)
       setValue('estado', data.estado)
@@ -41,7 +43,7 @@ function DirectorEdit() {
     console.log(data);
 
     const enviarDatos = async () => {
-      const respuesta = await fetch(`http://localhost:3000/director/${id}`, {
+      const respuesta = await fetch(`${url_api}/director/${id}`, {
         method: "PUT",
         body: JSON.stringify(data), 
         headers: {

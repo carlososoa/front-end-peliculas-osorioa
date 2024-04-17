@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 
 function Pelicula() {
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
 
   const [peliculasC, setPeliculas] = useState([])
 
@@ -14,7 +15,7 @@ function Pelicula() {
 
     try {
 
-      const response = await fetch('http://localhost:3000/media')
+      const response = await fetch(`${url_api}/media`)
       const data = await response.json()
       
       

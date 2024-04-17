@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 
 function Productora() {
+  const url_api = 'https://api-peliculas-osorioa.onrender.com'
 
   const [productoraConsulta, setProductoraConsulta] = useState([])
 
@@ -14,7 +15,7 @@ function Productora() {
 
     try {
 
-      const response = await fetch('http://localhost:3000/productora')
+      const response = await fetch(`${url_api}/productora`)
       const data = await response.json()
 
 
